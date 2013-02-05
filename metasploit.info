@@ -1,0 +1,8 @@
+PRGNAM="metasploit"
+VERSION="4.4.0"
+HOMEPAGE="http://www.metasploit.com/"
+DOWNLOAD="http://downloads.metasploit.com/data/releases/metasploit-4.4.0-linux-installer.run"
+MD5SUM="2a32fb2d512d66d69455fa2d95fad1d3"
+DOWNLOAD_x86_64="http://downloads.metasploit.com/data/releases/metasploit-4.4.0-linux-x64-installer.run"
+MD5SUM_x86_64="b59f4386ab01b6a1422eb999a02f1305"
+REQUIRES=""
