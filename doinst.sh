@@ -22,6 +22,4 @@ config etc/rc.d/rc.metasploit.new
 # for the msfupdate to upgrade msf3 without annoying the user...
 # Binary installation must be upgraded manually though.
 ( cd opt/metasploit/apps/pro/msf3
-  git init >/dev/null
-  mkdir -p ../engine/license
-  touch ../engine/license/product.key )
+  git init >/dev/null )
