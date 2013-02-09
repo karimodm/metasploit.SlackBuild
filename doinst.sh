@@ -18,8 +18,6 @@ if [ -e etc/rc.d/rc.metasploit ]; then
 fi
 
 config etc/rc.d/rc.metasploit.new
-# Initialize a msf3 git repo for msfupdate and touch a product.key 
-# for the msfupdate to upgrade msf3 without annoying the user...
-# Binary installation must be upgraded manually though.
+# Initialize a msf3 git repo for msfupdate
 ( cd opt/metasploit/apps/pro/msf3
   git init >/dev/null )
