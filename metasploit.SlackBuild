@@ -136,6 +136,9 @@ mkdir -p $PKG/install
 cat $CWD/slack-desc > $PKG/install/slack-desc
 cat $CWD/doinst.sh > $PKG/install/doinst.sh
 
+# Create a symbolic link to msf3 core directory for convenience
+ln -s apps/pro/msf3 $PKG/$INSTDIR/msf3
+
 # Do NOT chown -R root:root or it will bork the shipped PostgreSQL
 # installation: the bitrock installer should have taken care of permissions
 cd $PKG
