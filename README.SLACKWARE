@@ -33,6 +33,8 @@ core directory (which contains the exploits' code as well as all the other modul
 will be upgraded by "msfupdate" as expected.
 Product key is therefore not required in any way to use the full capabilities
 of the framework, as well as upgrading correctly the core directory through git.
+In case you want to obtain a valid product key, it is possible to register the
+Metasploit Community Edition for free.
 
 Default database server listening port is 7175, if you want to use another
 port, just export the PG_PORT variable when running the SlackBuild, like this:
