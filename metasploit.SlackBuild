@@ -118,10 +118,11 @@ rm -f /etc/rc.d/rc?.d/S80metasploit /etc/rc.d/rc?.d/K30metasploit
 mv /etc/init.d/$INITSCRIPT $PKG/etc/rc.d/rc.$INITSCRIPT.new
 chown root:root $PKG/etc/rc.d/rc.$INITSCRIPT.new
 chmod 755 $PKG/etc/rc.d/rc.$INITSCRIPT.new
-# Default installation makes pro stuff, starting metasploit_SCRIPT and PROSVC_SCRIPT. Disable this...
-# We want only to start framework's PostgresSQL
+# Default installation makes pro stuff, starting METASPLOIT_SCRIPT, PROSVC_SCRIPT and WORKER_SCRIPT. Disable this...
+# We want only to start framework's PostgreSQL
 chmod -x $PKG/$INSTDIR/apps/pro/ui/scripts/ctl.sh 
 chmod -x $PKG/$INSTDIR/apps/pro/engine/scripts/ctl.sh 
+chmod -x $PKG/$INSTDIR/apps/pro/ui/scripts/worker_ctl.sh
 
 # Install /usr/bin links
 mkdir -p $PKG/usr/bin
