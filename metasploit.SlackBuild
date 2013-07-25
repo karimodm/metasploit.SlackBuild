@@ -97,7 +97,13 @@ $CWD/metasploit-$VERSION-linux$INSTALLERARCH-installer.run \
 # Stop Metasploit Framework PostgreSQL
 echo "Stopping Metasploit Framework..."
 INITSCRIPT=metasploit
-/etc/init.d/$INITSCRIPT stop
+if ! /etc/init.d/$INITSCRIPT stop; then
+	echo "Waiting for PostgreSQL to finish deferred work..."
+	PSPID=$(head -1 /$INSTDIR/postgresql/data/postmaster.pid)
+	while kill -0 $PSPID 2>/dev/null; do
+		sleep 1;
+	done
+fi
 
 # Move install dir
 mkdir -p $PKG/$BASEINSTDIR
