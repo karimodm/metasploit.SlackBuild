@@ -131,8 +131,6 @@ echo "Installing links into /usr/bin..."
   for file in $(ls ../../$INSTDIR/app/msf*); do
     ln -sf $file $(basename $file)
   done
-  # also links armitage
-  ln -sf ../../$INSTDIR/app/armitage armitage
 )
 
 # Every useful doc is included inside the framework folder, just copy over the
